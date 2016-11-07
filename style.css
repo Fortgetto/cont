@@ -1,0 +1,338 @@
+body {
+    margin:0px;
+    color: #7c7873;
+    background-image: url('starring.png');
+}
+
+h1 {margin-bottom:-150px; text-align:center;font-size:48px; text-shadow:0 1px 0 #ede8d9; }
+
+.container {
+    background-color: #f7f2ec;
+    position:relative;
+    width:750px;
+    margin-top: 50px;
+    margin-left: 23%;
+}
+
+.title {    
+    padding:10px;
+    border-bottom:2px solid;
+    background:rgb(250,250,250);
+}
+
+.title h1 {
+    margin:0px;
+    font-family:sans-serif;
+    font-weight:normal;
+    text-shadow:0px 0px 1px rgba(0,0,0,0.4);
+}
+
+.quickadd {
+    padding:10px;
+    border-bottom:1px solid;
+    background-color: #fffbf5;
+}
+
+#addButton {
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    border-radius: 0;
+    color: #69bd0f;
+    font-size: 16px;
+    background-color: #fffbf5;
+    padding: 7px 12px 7px 12px;
+    border: solid #7c7873 2px;
+    text-shadow: 0px 0px 1px;
+}
+
+#addButton:hover {
+    background: #69bd0f;
+    text-decoration: none;
+    color: #fffbf5;
+}
+
+
+.quickaddForm {
+    display:none;
+    background:#744e20 url('letter_bg.png'); 
+    position:relative;
+    overflow:hidden;
+    height:185px;
+    margin:0px auto;
+    padding:10px; 
+    border-bottom: 1px solid;
+    }
+                
+
+.quickaddForm label {
+    float: left;
+    position: inherit;
+    font-size: 14px; color: #868079;
+    text-transform: uppercase; 
+    text-shadow: 0px 1px 0px #fff;
+}
+
+#filterField{
+    display: block;
+    width: 335px;
+    height: 35px;
+    float: right;
+    font-size: 18px;
+    font-family: sans-serif;
+    text-shadow: 0px 0px 1px rgba(0,0,0,0.4);
+    border: 2px solid #7c7873;
+    padding: 0px 10px 0px 10px;
+    text-align: center;
+    
+    
+}
+
+#filterField::-moz-placeholder {
+    font-style:oblique;
+    font-size: 17px;
+    font-family: sans-serif;
+    color:rgba(88, 70, 49, 0.42);
+    text-align: center;
+}
+
+#forname{
+    float: left;
+    position: absolute;
+    margin-top: 25px;
+    margin-left: 0px;
+}
+
+#formail{
+    float: left;
+    margin-top: 6px;
+    margin-left: 0px;
+}
+
+#forphone{
+   
+    float: left;
+    margin-top: 6px;
+    margin-left: 0px;
+    
+}
+
+
+#name{
+    display: block;
+    margin-top: 20px;
+    margin-left: 80px;
+    font-size: 18px;
+    
+    
+    
+}
+
+#phone{
+    display: block;
+    margin-top: 0px;
+    margin-left: 80px;
+    font-size: 18px;
+}
+
+#email{
+    
+    display: block;
+    margin-top: 0px;
+    margin-left: 80px;
+    font-size: 18px;
+}
+
+#address{
+    display: block;
+    margin-top: -44px;
+    padding: 5px 10px;
+    float: right;
+    width: 336px;
+    height: 108px;
+    font-size: 18px;
+}
+.quickaddForm input,textarea {
+    font: 14px normal normal uppercase helvetica, arial, serif;
+    color: #7c7873;
+    background-color: #fffbf5;
+    width: 222px; 
+    height: 30px; 
+    padding: 0px 10px; 
+    margin: 0 0 10px 0;
+    border:2px solid #dad1c5;
+    -moz-border-radius: 0px; 
+    -webkit-border-radius: 0px; border-radius: 0px;
+    -moz-box-shadow: inset 0px 0px 1px #726959;
+    -webkit-box-shadow:  inset 0px 0px 1px #b3a895; 
+    box-shadow:  inset 0px 0px 1px #b3a895;
+		}
+
+#Add {
+    display: block;
+    float: right;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    border-radius: 0;
+    margin-top: -2px;
+    color: #8099d9;
+    font-size: 15px;
+    background-color: #fffbf5;
+    padding: 7px 12px 7px 12px;
+    border: solid #7c7873 2px;
+    text-shadow: 0px 0px 1px;
+}
+
+#Add:hover {
+    background: #3cb0fd;
+    text-decoration: none;
+    color: #fffbf5;
+}
+
+#Cancel {
+    display: block;
+    float: right;
+    margin-left: 120px;
+    margin-top: -2px;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    border-radius: 0px;
+    color: #e07055;
+    font-size: 15px;
+    background-color: #fffbf5;
+    padding: 7px 12px 7px 12px;
+    border: solid #7c7873 2px;
+    border-right-width: 0px;
+    text-shadow: 0px 0px 1px;
+}
+
+#Cancel:hover {
+    background: #e07055;
+    text-decoration: none;
+    color: #fffbf5;
+}
+.addbook input {
+    width: 280px;
+    height: 23px;
+    margin: 5px 0px 0px 0px;
+    font: 18px normal normal uppercase helvetica, arial, serif;
+    border: 3px green;
+    padding: 0;
+    color: #7c7873;
+    
+}
+
+input[readonly] {
+    
+    width: 280px;
+    height: 23px;
+    margin: 5px 0px 0px 0px;
+    font: 18px normal normal uppercase helvetica, arial, serif;
+    background-color: #fffbf5;
+    border: 0;
+    padding: 0;
+    color: #7c7873;
+    
+    
+}
+.entry {
+    background:#744e20 url('letter_bg.png'); 
+    position:relative;
+    overflow:hidden;
+    height:130px;
+    margin:0px auto;
+    padding:10px; 
+    border: 1px solid;
+}
+
+.entry .name {
+    display: block;
+    width: 300px;
+    height: 35px;
+    font: 16px normal normal uppercase helvetica, arial, serif;
+    float:left;
+    padding:5px 10px 2px 10px;
+    background-color: #fffbf5;
+    margin-left: -1px;
+    border: 2px solid;
+}
+
+.entry .email {
+    display: block;
+    width: 300px;
+    height: 35px;
+    float:left;
+    margin-top: 44px;
+    margin-left: -324px;
+    padding:5px 10px 2px 10px;
+    background-color: #fffbf5;
+    border: 2px solid;
+}
+
+
+.entry .phone {
+    display: block;
+    width: 300px;
+    height: 35px;
+    margin-top: 88px;
+    margin-left: -324px;
+    float:left;
+    padding:5px 10px 2px 10px;
+    background-color: #fffbf5;
+    border: 2px solid;
+}
+
+.entry .address {
+    width: 333px;
+    height: 110px;
+    float: right;
+    padding: 10px;
+    border: 2px solid;
+    background-color: #fffbf5;
+}
+
+#fieldAddress   {
+    
+    width: 335px;
+    height: 110px;
+    margin: 0px 0px 0px 0px;
+    font: 16px normal normal uppercase helvetica, arial, serif;
+    background-color: #fffbf5;
+    border: 0;
+    padding: 10px;
+    resize: none;
+    
+}
+
+.entry .del {
+    width: 30px;
+    height: 30px;
+    float: right;
+    margin-right: -369px;
+    background-color: #e2d3d3;
+    margin-top: -10px;
+}
+
+.entry p {
+    margin: 0px;
+    font-family:sans-serif;
+    font-size:16px;
+    text-shadow:0px 0px 1px rgba(0,0,0,0.4);
+}
+
+.entry .del a {
+    background-image: url(close-circle-outline.svg);
+    background-repeat: no-repeat;
+    width: auto;
+    color:#f51212;
+    font-size:12px;
+    padding:20px 5px 10px 24px;
+    float: right;
+    text-decoration:none;
+}
+
+.entry .del:hover{
+    
+    background-color: rgb(70, 58, 51);
+    
+}
+
