@@ -41,7 +41,7 @@ window.onload = function(){
 		this.address = address;
 		this.email = email;
 	}
-//форма-шаблон
+
 	function addToBook(){
 		var isNull = name.value!='' || phone.value!='' || address.value!='' || email.value!='';
 		if(isNull){
@@ -53,7 +53,9 @@ window.onload = function(){
 			showAddressBook();
 		}
 	}
-    
+//недобавлено сравнение по RegExp
+//не решил как хочу отображать выборку, пока только бэкграунд
+//срабатывает при 100% идентичности value
      function searchItems(e){
         var items = document.getElementsByClassName('fieldDis');
         for(var u of items){
@@ -79,13 +81,14 @@ window.onload = function(){
 		}
 	}
     
+    
+ //Edit функция, срабатывает по blur
+//к JSON не подвязана   
     function editAttr(e){
         
         var focItem = e.target;
         var parrent = focItem.parentElement;
         
-        
- //неподвзязал изменения в JSON arrey      
         focItem.onblur =  function() {
             
             localStorage['addbook'] = JSON.stringify(this.value);
@@ -104,7 +107,7 @@ window.onload = function(){
 			formFields[i].value = '';
 		}
 	}
-
+//парсит строчysq arrey JSON и вбивает в шаблон
 	function showAddressBook(){
 		if(localStorage['addbook'] === undefined){
 			localStorage['addbook'] = '';
