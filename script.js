@@ -41,11 +41,10 @@ window.onload = function(){
 		this.address = address;
 		this.email = email;
 	}
-
+//форма-шаблон
 	function addToBook(){
 		var isNull = name.value!='' || phone.value!='' || address.value!='' || email.value!='';
 		if(isNull){
-			// format the input into a valid JSON structure
 			var obj = new jsonStructure(name.value,phone.value,address.value,email.value);
 			addressBook.push(obj);
 			localStorage['addbook'] = JSON.stringify(addressBook);
@@ -86,7 +85,7 @@ window.onload = function(){
         var parrent = focItem.parentElement;
         
         
-        
+ //неподвзязал изменения в JSON arrey      
         focItem.onblur =  function() {
             
             localStorage['addbook'] = JSON.stringify(this.value);
@@ -111,7 +110,6 @@ window.onload = function(){
 			localStorage['addbook'] = '';
 		} else {
 			addressBook = JSON.parse(localStorage['addbook']);
-			// Loop over the array addressBook and insert into the page
 			addBookDiv.innerHTML = '';
 			for(var n in addressBook){
 				var str = '<div class="entry">';
