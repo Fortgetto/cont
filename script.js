@@ -1,19 +1,19 @@
 window.onload = function(){
 	// Кнопки
-	var quickAddBtn = document.getElementById('addButton');
-	var quickAddFormDiv = document.querySelector('.quickaddForm');
-	var cancelBtn = document.getElementById('Cancel');
-	var AddBtn = document.getElementById('Add');
+	var quickAddBtn = document.getElementById('addButton'),
+	    quickAddFormDiv = document.querySelector('.quickaddForm'),
+	    cancelBtn = document.getElementById('Cancel'),
+	    AddBtn = document.getElementById('Add'),
 	// Поля формы
-	var fullname = document.getElementById('fullname');
-	var phone = document.getElementById('phone');
-	var address = document.getElementById('address');
-	var email = document.getElementById('email');
-    var items = document.querySelectorAll('fieldDis');
+	    fullname = document.getElementById('fullname'),
+	    phone = document.getElementById('phone'),
+	    address = document.getElementById('address'),
+	    email = document.getElementById('email'),
+        items = document.querySelectorAll('fieldDis'),
 	// Дивы
-	var addBookDiv = document.querySelector('.addbook');
-    var fields = addBookDiv.getElementsByTagName('input');
-    var filter = document.getElementById('filterField');
+	    addBookDiv = document.querySelector('.addbook'),
+        fields = addBookDiv.getElementsByTagName('input'),
+        filter = document.getElementById('filterField');
    
 
 	quickAddBtn.addEventListener("click", function(){
@@ -26,7 +26,7 @@ window.onload = function(){
 	});
 
 	AddBtn.addEventListener("click", addToBook);
-    filter.addEventListener("input", searchItems);
+    filter.addEventListener("input", searchNotes);
 	addBookDiv.addEventListener("click", removeEntry);
     addBookDiv.addEventListener("click", editAttr);
 
@@ -56,20 +56,35 @@ window.onload = function(){
 //недобавлено сравнение по RegExp
 //не решил как хочу отображать выборку, пока только бэкграунд
 //срабатывает при 100% идентичности value
-     function searchItems(e){
-        var items = document.getElementsByClassName('fieldDis');
-        for(var u of items){
-          console.log(u);
-          if(u.value == filter.value){
-             u.style.backgroundColor="rgba(105, 189, 15, 0.55)"; 
+     function searchNotes(e){
+
+         if(filter.value != null){
+          var note = filter.value;
+          var items = document.getElementsByClassName('fieldDis');
+          for(var n of items){
+            function nChar(value){
+                for(var i of value){
+                nChar = value.replace( /^[0-9a-zA-Z]+$/, '');
+                return value.split( /^[0-9a-zA-Z]+$/, '');
+                }
+            }
+              
+            var res = nChar(n.value);  
+            
+             if(res == note){
+              
+              n.style.backgroundColor="rgba(105, 189, 15, 0.55)"; 
           }
           else{
               
-            u.style.backgroundColor="#fffbf5";  
+             n.style.backgroundColor="#fffbf5";  
           }
+         }
         }
-      }
-// Удаление записи с подтверждением
+       }
+      
+    
+ 
    function removeEntry(e){
        
 		if(e.target.classList.contains('delbutton')){
@@ -91,7 +106,6 @@ window.onload = function(){
         
         focItem.onblur =  function() {
             
-            localStorage['addbook'] = JSON.stringify(this.value);
             this.setAttribute("readonly", true);
         }    
             focItem.onmousedown = function(){
@@ -107,7 +121,7 @@ window.onload = function(){
 			formFields[i].value = '';
 		}
 	}
-//парсит строчysq arrey JSON и вбивает в шаблон
+//парсит строчный arrey JSON и вбивает в шаблон
 	function showAddressBook(){
 		if(localStorage['addbook'] === undefined){
 			localStorage['addbook'] = '';
