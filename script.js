@@ -5,7 +5,7 @@ window.onload = function(){
 	    cancelBtn = document.getElementById('Cancel'),
 	    AddBtn = document.getElementById('Add'),
 	// Поля формы
-	    fullname = document.getElementById('fullname'),
+	    name = document.getElementById('name'),
 	    phone = document.getElementById('phone'),
 	    address = document.getElementById('address'),
 	    email = document.getElementById('email'),
@@ -130,7 +130,7 @@ window.onload = function(){
 			addBookDiv.innerHTML = '';
 			for(var n in addressBook){
 				var str = '<div class="entry">';
-					str += '<div class="name"><input readonly class="fieldDis" type="text" value="'+ addressBook[n].fullname+'"></div>';
+					str += '<div class="name"><input readonly class="fieldDis" type="text" value="'+ addressBook[n].name+'"></div>';
 					str += '<div class="email"><input readonly class="fieldDis" type="text" value="'+ addressBook[n].email+'"></div>';
 					str += '<div class="phone"><input readonly class="fieldDis" type="text" value="'+addressBook[n].phone +'"></div>';
 					str += '<div class="address"><input readonly class="fieldDis" type="text" value="'+ addressBook[n].address +'"></div>';
