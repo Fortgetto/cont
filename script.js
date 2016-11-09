@@ -65,7 +65,7 @@ window.onload = function(){
             function nChar(value){
                 for(var i of value){
                 nChar = value.replace( /^[0-9a-zA-Z]+$/, '');
-                return value.split( /^[0-9a-zA-Z]+$/, '');
+                return value.replace( /^[0-9a-zA-Z]+$/, '');
                 }
             }
               
