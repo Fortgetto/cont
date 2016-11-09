@@ -150,6 +150,7 @@ h1 {margin-bottom:-150px; text-align:center;font-size:48px; text-shadow:0 1px 0 
     width: 336px;
     height: 108px;
     font-size: 18px;
+    resize: none;
 }
 .quickaddForm input,textarea {
     font: 14px normal normal uppercase helvetica, arial, serif;
