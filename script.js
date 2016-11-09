@@ -33,7 +33,7 @@ window.onload = function(){
 	// Демо массив в хранилище
 	var addressBook = [];
 
-	localStorage['addbook'] = '[{"fullname":"Акимов В.А.","email":"fotvorkot@gmail.com","phone":"+79137454521","address":"Томск"},{"fullname":"Золотухин Илья","email":"zolotuhin_ii@bw-sw.com","phone":"undefined","address":"Томск"}]';
+	localStorage['addbook'] = '[{"name":"Акимов В.А.","email":"fotvorkot@gmail.com","phone":"+79137454521","address":"Томск"},{"name":"Золотухин Илья","email":"zolotuhin_ii@bw-sw.com","phone":"undefined","address":"Томск"}]';
 
 	function jsonStructure(name,phone,address,email){
 		this.name = name;
